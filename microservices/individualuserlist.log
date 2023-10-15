@@ -1,0 +1,17 @@
+2023-10-09 16:44:46,811 Individual User transit fetch request - rahul.151897@gmail.com
+2023-10-09 16:44:46,811 Exception on /user [GET]
+Traceback (most recent call last):
+  File "/Users/rahulchahal/anaconda3/envs/new/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/rahulchahal/anaconda3/envs/new/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/rahulchahal/anaconda3/envs/new/lib/python3.10/site-packages/flask_restful/__init__.py", line 489, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/Users/rahulchahal/anaconda3/envs/new/lib/python3.10/site-packages/flask/views.py", line 107, in view
+    return current_app.ensure_sync(self.dispatch_request)(**kwargs)
+  File "/Users/rahulchahal/anaconda3/envs/new/lib/python3.10/site-packages/flask_restful/__init__.py", line 604, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/Users/rahulchahal/project/license/OpenCV_3_License_Plate_Recognition_Python-master/microservices/app.py", line 85, in get
+    cursor = mysql.connection.cursor()
+AttributeError: 'NoneType' object has no attribute 'cursor'
+2023-10-09 16:44:46,813 127.0.0.1 - - [09/Oct/2023 16:44:46] "[35m[1mGET /user?email=rahul.151897@gmail.com HTTP/1.1[0m" 500 -
